@@ -14,3 +14,4 @@ function multiply (numeric: number, otherNumber?: number, base: number = 2){
 const result1 = add(1,2);
 
 const result2 = multiply(10,20,1);
+
