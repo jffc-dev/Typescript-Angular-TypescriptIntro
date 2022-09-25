@@ -1,28 +1,27 @@
-interface Character1 {
-    name: string;
-    hp: number;
-    skills: string[];
-    country?: String;
-    showHp: ()=>void;
+interface Superhero {
+    name: string,
+    age: number,
+    address: Address,
+    showAddress: () => void
 }
 
-function heal(character: Character1, HpToHeal): void{
-
-    character.hp += HpToHeal;
-    console.log(character);
-    
-
+interface Address {
+    street: string,
+    country: string,
+    city: string
 }
 
-const newCharacter_t: Character1 = {
-    name: "Javier",
-    hp: 100,
-    skills: [],
-    showHp() {
-        console.log("The character has " + this.hp + " life points");
+const superhero: Superhero = {
+    name: 'Spiderman',
+    age: 30,
+    address: {
+        street: 'Main St',
+        country: 'USA',
+        city: 'NY'
+    },
+    showAddress(){
+        return this.name + ', ' + this.address.city + ', ' + this.address.country;
     }
 }
 
-newCharacter_t.showHp();
-heal(newCharacter_t,30);
-newCharacter_t.showHp();
+console.log(superhero.showAddress());
