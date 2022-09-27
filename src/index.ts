@@ -1,15 +1,30 @@
-const dbz: string[] = ['Goku','Vegeta','Trunks'];
+interface Product {
+    desc: string;
+    price: number;
+}
 
-console.log(dbz[0]);
-console.log(dbz[1]);
-console.log(dbz[2]);
+const telefono: Product = {
+    desc: 'Nokia A1',
+    price: 150
+}
 
-const [d1, d2, d3] = dbz;
+const tableta: Product = {
+    desc: 'iPad Air',
+    price: 350
+}
 
-console.log(d1);
-console.log(d2);
-console.log(d3);
+function calculateISV(products: Product[]): [number, number]{
 
-const [,,a1] = dbz;
+    let total = 0
 
-console.log(a1);
+    products.forEach(({price})=>{
+        total += price;
+    })
+
+    return [total, total * 0.18];
+}
+
+const items = [telefono, tableta];
+
+const [total,igv] = calculateISV(items);
+console.log(igv);
