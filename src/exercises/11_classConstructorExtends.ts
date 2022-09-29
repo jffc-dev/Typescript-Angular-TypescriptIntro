@@ -7,7 +7,7 @@ class NormalPerson{
 
 }
 
-class Hero extends NormalPerson {
+class Hero1 extends NormalPerson {
     // private alterEgo: string;
     // public age: number;
     // static realName: string;
@@ -25,7 +25,7 @@ class Hero extends NormalPerson {
     }
 }
 
-const ironman = new Hero('Ironman',50, 'Tony Stark');
-console.log(ironman);
+const ironman1 = new Hero1('Ironman1',50, 'Tony Stark');
+console.log(ironman1);
 
-console.log(ironman.printName());
+console.log(ironman1.printName());
