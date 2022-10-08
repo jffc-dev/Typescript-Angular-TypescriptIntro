@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public title: string = 'Contador App';
   public number: number = 0;
+  public base: number = 5;
 
   sumar(){
     this.number++;
