@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
+  public heroes: string[] = ['Ironman', 'Superman', 'Spiderman', 'Batman', 'Hulk', 'Captain America'];
+  public deletedHero: string = '';
+
   constructor() {
     console.log("Hello from constructor");
 
@@ -13,6 +16,11 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
     console.log("Hello from onInit");
+  }
+
+  public DeleteHero(): void{
+    const dHero:string = this.heroes.pop() || '';
+    this.deletedHero = dHero;
   }
 
 }
