@@ -4,9 +4,9 @@
   <li *ngFor="let hero of heroes; let i = index">{{i + 1}} - {{hero}}</li>
 </ul>
 
-<div>
+<div *ngIf="deletedHero !== ''">
   <h3>Deleted Hero</h3>
-  <span>{{deletedHero}}</span>
+  <small>{{deletedHero}}</small>
 </div>
 
 <button (click)="DeleteHero()">
