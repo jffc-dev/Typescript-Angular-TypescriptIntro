@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-interface Character {
+export interface Character {
   name: string;
   power: number;
 }
