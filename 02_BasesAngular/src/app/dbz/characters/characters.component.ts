@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Character } from '../main-page/main-page.component';
+import { Component, Input, OnInit } from '@angular/core';
+import { Character } from '../interfaces/dbz.interface';
 
 @Component({
   selector: 'app-characters',
@@ -7,6 +7,6 @@ import { Character } from '../main-page/main-page.component';
 })
 export class CharactersComponent {
 
-  charactersList: Character[] = [];
+  @Input('data') charactersList: Character[] = [];
 
 }
