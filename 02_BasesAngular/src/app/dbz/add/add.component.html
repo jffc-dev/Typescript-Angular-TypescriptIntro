@@ -1,0 +1,13 @@
+<h3>Agregar</h3>
+<hr>
+
+<form (ngSubmit)="add()">
+  <input placeholder="Character name" type="text"
+    [(ngModel)]="newCharacter.name" name="name"
+  />
+  <!-- [value]="newCharacter.name" (input)="changeName($event)" -->
+
+  <input placeholder="Character power" type="number"
+    [(ngModel)]="newCharacter.power" name="power"/>
+  <button>Add</button>
+</form>

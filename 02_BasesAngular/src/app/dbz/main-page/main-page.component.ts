@@ -23,21 +23,4 @@ export class MainPageComponent {
     power: 0
   }
 
-  public add = (): void => {
-    if(this.newCharacter.name.trim().length === 0){
-      return;
-    }
-
-    this.charactersList.push(this.newCharacter);
-
-    this.newCharacter = {
-      name: '',
-      power: 0
-    }
-  }
-
-  public changeName = (event:any):void => {
-    console.log(event.target.value);
-  }
-
 }
