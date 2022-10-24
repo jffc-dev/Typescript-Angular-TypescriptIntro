@@ -7,7 +7,9 @@
   </div>
 
   <div class="col">
-    <app-add [data]="charactersList" [newCharacter]="newCharacter"></app-add>
+    <app-add [newCharacter]="newCharacter"
+              (onNewCharacter)="addNewCharacter($event)"
+    ></app-add>
   </div>
 
 </div>
