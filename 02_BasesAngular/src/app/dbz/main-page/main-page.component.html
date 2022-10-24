@@ -3,12 +3,11 @@
 
 <div class="row">
   <div class="col">
-    <app-characters [data]="charactersList"></app-characters>
+    <app-characters></app-characters>
   </div>
 
   <div class="col">
     <app-add [newCharacter]="newCharacter"
-              (onNewCharacter)="addNewCharacter($event)"
     ></app-add>
   </div>
 
