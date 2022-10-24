@@ -21,4 +21,8 @@ export class DBZService{
   get charactersList(): Character[]{
     return [...this._charactersList];
   }
+
+  public addCharacter = (character: Character): void => {
+    this._charactersList.push(character);
+  }
 }

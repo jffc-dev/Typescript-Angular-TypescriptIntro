@@ -10,12 +10,12 @@ export class CharactersComponent {
 
   // @Input('data') charactersList: Character[] = [];
 
-  constructor(private dbzService: DBZService){
-
-  }
-
   get charactersList():Character[]{
     return this.dbzService.charactersList;
+  }
+
+  constructor(private dbzService: DBZService){
+
   }
 
 }
