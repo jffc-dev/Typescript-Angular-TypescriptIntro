@@ -1,14 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html'
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent {
 
-  constructor() { }
+  //https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#non-null-assertion-operator
+  //Non-Null Assertion Operator
+  @ViewChild('txtSearch') txtSearch!: ElementRef<HTMLInputElement>;
 
-  ngOnInit(): void {
+  public search = () : void => {
+
+    const val = this.txtSearch.nativeElement.value;
+    console.log(val);
+    this.txtSearch.nativeElement.value = '';
   }
-
 }
