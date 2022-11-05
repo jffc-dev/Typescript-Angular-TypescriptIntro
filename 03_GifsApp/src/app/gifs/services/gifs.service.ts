@@ -9,6 +9,9 @@ export class GifsService {
   private _apiKey: string = "ReJxeK0bqqIke98ehJl8bdDJjanhnRyy";
   private _history: string[] = [];
 
+  // TODO: Change any by type
+  public resultados: any[] = [];
+
   get history(){
     return [...this._history];
   }
@@ -24,9 +27,10 @@ export class GifsService {
       this._history = this._history.splice(0,10);
     }
 
-    this.http.get('https://api.giphy.com/v1/gifs/search?api_key=ReJxeK0bqqIke98ehJl8bdDJjanhnRyy&q=gohan&limit=10')
+    this.http.get(`https://api.giphy.com/v1/gifs/search?api_key=ReJxeK0bqqIke98ehJl8bdDJjanhnRyy&q=${query}&limit=10`)
       .subscribe((resp:any) => {
         console.log(resp.data);
+        this.resultados = resp.data;
       })
 
     console.log(this._history);
