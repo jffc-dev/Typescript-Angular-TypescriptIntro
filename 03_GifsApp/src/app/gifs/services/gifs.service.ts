@@ -36,13 +36,11 @@ export class GifsService {
       localStorage.setItem('history',JSON.stringify(this._history))
     }
 
-    this.http.get<SearchGIFResponse>(`https://api.giphy.com/v1/gifs/search?api_key=ReJxeK0bqqIke98ehJl8bdDJjanhnRyy&q=${query}&limit=10&lang=es`)
+    this.http.get<SearchGIFResponse>(`https://api.giphy.com/v1/gifs/search?api_key=${this._apiKey}&q=${query}&limit=10&lang=es`)
       .subscribe((resp) => {
         console.log(resp.data);
         this.results = resp.data;
         localStorage.setItem('results',JSON.stringify(this.results))
       })
-
-    console.log(this._history);
   }
 }

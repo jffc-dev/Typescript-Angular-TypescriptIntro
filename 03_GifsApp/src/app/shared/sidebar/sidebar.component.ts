@@ -11,6 +11,11 @@ export class SidebarComponent {
     return this.gifsService.history;
   }
 
+  public search = (event: MouseEvent, query: string):void => {
+    event.preventDefault();
+    this.gifsService.searchGifs(query);
+  }
+
   constructor(private gifsService:GifsService) { }
 
 }
