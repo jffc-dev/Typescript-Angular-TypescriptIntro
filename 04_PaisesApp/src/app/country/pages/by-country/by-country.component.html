@@ -1,1 +1,42 @@
-<p>by-country works!</p>
+<h2>By contry</h2>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <form autocomplete="off" (ngSubmit)="search()">
+      <input type="text" name="termino" placeholder="Search contry..." class="form-control" [(ngModel)]="searched"/>
+    </form>
+  </div>
+</div>
+
+<hr/>
+<div class="alert alert-danger">
+  Nothing was found with the term abc
+</div>
+
+<div class="row">
+  <div class="col">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Flag</th>
+          <th>Name</th>
+          <th>Population</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <th>flag</th>
+          <th>name</th>
+          <th>123123</th>
+          <th>
+
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
