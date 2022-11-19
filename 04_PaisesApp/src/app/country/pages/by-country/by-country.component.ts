@@ -18,10 +18,10 @@ export class ByCountryComponent {
     this.thereIsError = false;
     console.log(this.searched);
     this.paisService.searchByCountry(this.searched)
-      .subscribe(
-        (country) => {console.log(country)},
-        (error) => {this.thereIsError = true;}
-      );
+      .subscribe({
+        next: (country) => {console.log(country)},
+        error: (error) => {this.thereIsError = true;}
+    });
   }
 
 }
