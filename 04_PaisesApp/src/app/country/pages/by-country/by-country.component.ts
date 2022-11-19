@@ -19,7 +19,7 @@ export class ByCountryComponent {
     console.log(this.searched);
     this.paisService.searchByCountry(this.searched)
       .subscribe(
-        (resp) => {console.log(resp)},
+        (country) => {console.log(country)},
         (error) => {this.thereIsError = true;}
       );
   }
