@@ -3,9 +3,7 @@
 
 <div class="row">
   <div class="col">
-    <form autocomplete="off" (ngSubmit)="search()">
-      <input type="text" name="termino" placeholder="Search contry..." class="form-control" [(ngModel)]="searched"/>
-    </form>
+    <app-country-input></app-country-input>
   </div>
 </div>
 
@@ -14,29 +12,8 @@
   Nothing was found with the term {{searched}}
 </div>
 
-<div *ngIf="!thereIsError" class="row">
+<div *ngIf="!thereIsError && countries.length > 0" class="row">
   <div class="col">
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Flag</th>
-          <th>Name</th>
-          <th>Population</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>1</th>
-          <th>flag</th>
-          <th>name</th>
-          <th>123123</th>
-          <th>
-
-          </th>
-        </tr>
-      </tbody>
-    </table>
+    <app-country-table [countries]="countries"></app-country-table>
   </div>
 </div>
