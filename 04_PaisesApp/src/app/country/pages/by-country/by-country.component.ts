@@ -30,4 +30,10 @@ export class ByCountryComponent {
     });
   }
 
+  showSuggestions = (searched: string):void => {
+    //TODO: create suggestions
+    console.log(searched);
+    this.thereIsError = false;
+  }
+
 }
