@@ -16,7 +16,8 @@ export class ByCountryComponent {
 
   constructor(private paisService: CountryService) { }
 
-  search = ():void => {
+  search = (searched: string):void => {
+    this.searched = searched;
     this.thereIsError = false;
     console.log(this.searched);
     this.paisService.searchByCountry(this.searched)
