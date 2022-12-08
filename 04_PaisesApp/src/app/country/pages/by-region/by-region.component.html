@@ -5,7 +5,15 @@
 
 <div class="row">
   <div class="col">
-    <button *ngFor="let region of regions" class="btn" (click)="toActiveRegion(region)" [class.btn-primary]="region == activeRegion" [class.btn-outline-primary]="region != activeRegion">
+    <!-- [class.btn-primary]="region == activeRegion" [class.btn-outline-primary]="region != activeRegion" -->
+    <button *ngFor="let region of regions"
+      class="btn"
+      (click)="toActiveRegion(region)"
+      [ngClass]="{
+        'btn-primary': region === activeRegion,
+        'btn-outline-primary': region !== activeRegion
+      }"
+      >
       {{region}}
     </button>
   </div>
