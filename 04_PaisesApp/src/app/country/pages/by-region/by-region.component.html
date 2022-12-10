@@ -5,7 +5,6 @@
 
 <div class="row">
   <div class="col">
-    <!-- [class.btn-primary]="region == activeRegion" [class.btn-outline-primary]="region != activeRegion" -->
     <button *ngFor="let region of regions"
       class="btn"
       (click)="toActiveRegion(region)"
