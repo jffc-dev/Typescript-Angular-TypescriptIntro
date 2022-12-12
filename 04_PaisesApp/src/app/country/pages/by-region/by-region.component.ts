@@ -13,9 +13,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ByRegionComponent {
 
-  regions: string[] = [ 'africa', 'americas', 'asia', 'europe', 'oceania'];
+  regions: string[] = [ 'EU','EFTA','CARICOM','PA','AU','USAN','EEU','AL','ASEAN','CAIS','CEFTA','NAFTA','SAARC' ];
 
   activeRegion: string = '';
+
+  getCssClass(region: string){
+    return (region === this.activeRegion) ? 'btn btn-primary' : 'btn btn-outline-primary'
+  }
 
   constructor() { }
 

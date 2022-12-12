@@ -8,12 +8,9 @@
     <button *ngFor="let region of regions"
       class="btn"
       (click)="toActiveRegion(region)"
-      [ngClass]="{
-        'btn-primary': region === activeRegion,
-        'btn-outline-primary': region !== activeRegion
-      }"
+      [class]="getCssClass(region)"
       >
-      {{region}}
+      {{region | titlecase}}
     </button>
   </div>
 </div>
