@@ -14,13 +14,13 @@ export class ByCapitalComponent {
   thereIsError: boolean = false;
   countries: Country[] = [];
 
-  constructor(private paisService: CountryService) { }
+  constructor(private countryService: CountryService) { }
 
   search = (searched: string):void => {
     this.searched = searched;
     this.thereIsError = false;
     console.log(this.searched);
-    this.paisService.searchByCapital(this.searched)
+    this.countryService.searchByCapital(this.searched)
       .subscribe({
         next: (countryResp) => {
           this.countries = countryResp;
