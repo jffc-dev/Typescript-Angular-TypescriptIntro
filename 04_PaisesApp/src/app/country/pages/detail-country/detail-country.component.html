@@ -1,8 +1,8 @@
-<div class="alert alert-info" *ngIf="!country; else divPais">
+<div class="alert alert-info" *ngIf="!country; else divCountry">
   Wait please...
 </div>
 
-<ng-template #divPais>
+<ng-template #divCountry>
   <div class="row">
     <div class="col-12">
       <h1>Country: <small>{{country.name.common}}</small></h1>
