@@ -1,23 +1,25 @@
-<h2>By country</h2>
-<hr>
+<div class="animate__animated animate__fadeIn animate__faster">
+  <h2>By country</h2>
+  <hr>
 
-<div class="row">
-  <div class="col">
-    <app-country-input
-      (onEnter)="search($event)"
-      (onDebounce)="showSuggestions($event)"
-      placeholder="Search a country..."
-    ></app-country-input>
+  <div class="row">
+    <div class="col">
+      <app-country-input
+        (onEnter)="search($event)"
+        (onDebounce)="showSuggestions($event)"
+        placeholder="Search a country..."
+      ></app-country-input>
+    </div>
   </div>
-</div>
 
-<hr/>
-<div class="alert alert-danger" *ngIf="thereIsError">
-  Nothing was found with the term {{searched}}
-</div>
+  <hr/>
+  <div class="alert alert-danger" *ngIf="thereIsError">
+    Nothing was found with the term {{searched}}
+  </div>
 
-<div *ngIf="!thereIsError && countries.length > 0" class="row">
-  <div class="col">
-    <app-country-table [countries]="countries"></app-country-table>
+  <div *ngIf="!thereIsError && countries.length > 0" class="row">
+    <div class="col">
+      <app-country-table [countries]="countries"></app-country-table>
+    </div>
   </div>
 </div>
