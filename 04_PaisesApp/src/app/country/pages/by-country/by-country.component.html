@@ -6,11 +6,22 @@
     <div class="col">
       <app-country-input
         (onEnter)="search($event)"
-        (onDebounce)="showSuggestions($event)"
+        (onDebounce)="onShowSuggestions($event)"
         placeholder="Search a country..."
       ></app-country-input>
     </div>
   </div>
+
+  <ul *ngIf="showSuggestions" class="list-group">
+    <li *ngFor="let country of suggestedCountries"
+      class="list-group-item list-group-item-action">
+      <a [routerLink]="['/country',country.cca2]" class="nav-link">{{country.name.common}}</a>
+    </li>
+
+    <li class="list-group-item list-group-item-action">
+      <a (click)="searchSuggested(searched)" class="nav-link">Search "{{searched}}"</a>
+    </li>
+  </ul>
 
   <hr/>
   <div class="alert alert-danger" *ngIf="thereIsError">
