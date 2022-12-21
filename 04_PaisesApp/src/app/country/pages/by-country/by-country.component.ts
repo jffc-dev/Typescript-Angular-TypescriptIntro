@@ -45,8 +45,12 @@ export class ByCountryComponent {
 
     this.countriesService.searchByCountry(searched)
       .subscribe(
-        resp => this.suggestedCountries = resp.splice(0,3),
-        err => this.thereIsError = true
+        {
+          next: (countryResp) => {
+            this.suggestedCountries = countryResp.splice(0,3)
+          },
+          error: (err) => this.thereIsError = true
+        }
       )
   }
 
