@@ -1,1 +1,7 @@
-<h1></h1>
+<h1>{{ name | uppercase }}</h1>
+<h1>{{ value | number }}</h1>
+<h1>{{ obj | json }}</h1>
+
+<button (click)="showName()">
+  Change name
+</button>
