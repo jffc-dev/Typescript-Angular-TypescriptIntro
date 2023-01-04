@@ -5,4 +5,12 @@
 </div>
 
 <button pButton (click)="showName()" label="Change name"></button>
+<button pButton type="button" label="Submit" icon="pi pi-check" iconPos="right"></button>
 
+<p-card [header]="name | titlecase" subheader="This is a subheader" [style]="{'width': '25rem', 'margin-bottom': '2em'}">
+  <ng-template pTemplate="header">
+      <img alt="Card" src="https://ca-times.brightspotcdn.com/dims4/default/a1a48fd/2147483647/strip/true/crop/1605x1070+0+0/resize/1486x991!/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F8b%2F07%2Fe91a86606630bfcdd256739e3b13%2Ff38865413d9d4b6293aefd50ba3d0eb1">
+  </ng-template>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+      quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+</p-card>
