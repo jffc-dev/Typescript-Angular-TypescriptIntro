@@ -5,9 +5,22 @@
   </p>
   <div class="grid">
     <div class="col-4">
-      <p-card header="uppercase"></p-card>
+      <p-card header="uppercase"
+      [subheader]="nameLower | uppercase">
+        {{nameLower | uppercase}}
+      </p-card>
     </div>
-    <div class="col-4">2</div>
-    <div class="col-4">3</div>
+    <div class="col-4">
+      <p-card header="lowercase"
+      [subheader]="nameUpper | lowercase">
+        {{nameUpper | lowercase}}
+      </p-card>
+    </div>
+    <div class="col-4">
+      <p-card header="titlecase"
+      [subheader]="nameFull | titlecase">
+        {{nameFull | titlecase}}
+      </p-card>
+    </div>
   </div>
 </div>
