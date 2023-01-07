@@ -3,24 +3,59 @@
   <p>
     Pipes included in Angular - Usually in Common Module
   </p>
-  <div class="grid">
-    <div class="col-4">
-      <p-card header="uppercase"
-      [subheader]="nameLower | uppercase">
-        {{nameLower | uppercase}}
-      </p-card>
-    </div>
-    <div class="col-4">
-      <p-card header="lowercase"
-      [subheader]="nameUpper | lowercase">
-        {{nameUpper | lowercase}}
-      </p-card>
-    </div>
-    <div class="col-4">
-      <p-card header="titlecase"
-      [subheader]="nameFull | titlecase">
-        {{nameFull | titlecase}}
-      </p-card>
-    </div>
+</div>
+
+<div class="grid">
+  <div class="col-4">
+    <p-card header="uppercase"
+    [subheader]="nameLower | uppercase">
+      {{nameLower | uppercase}}
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="lowercase"
+    [subheader]="nameUpper | lowercase">
+      {{nameUpper | lowercase}}
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="titlecase"
+    [subheader]="nameFull | titlecase">
+      {{nameFull | titlecase}}
+    </p-card>
+  </div>
+</div>
+
+
+<div class="text-layout">
+  <h1>Date pipes</h1>
+  <p>
+    Pipes for date management
+  </p>
+</div>
+
+<div class="grid">
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>Today</li>
+        <li>Today | date</li>
+        <li>Today | date:'short'</li>
+        <li>Today | date:'long'</li>
+        <li>Today | date:'yyyy-MM-dd hh:mm a'</li>
+      </ul>
+    </p-card>
+  </div>
+
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>{{today}}</li>
+        <li>{{today | date}}</li>
+        <li>{{today | date:'short' }}</li>
+        <li>{{today | date:'long' }}</li>
+        <li>{{today | date:'yyyy-MM-dd hh:mm a' }}</li>
+      </ul>
+    </p-card>
   </div>
 </div>
