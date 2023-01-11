@@ -5,13 +5,29 @@
   </p>
 </div>
 
-<div class="p-grid">
-  <div class="p-col-4">
+<div class="grid">
+  <div class="col-4">
     <p-card header="Net sales"
             subheader="of current year"
     >
     <i class="pi pi-dollar"></i>{{netSales | number:'1.5-5'}}<br>
     <i class="pi pi-dollar"></i>{{(netSales + 1000000) | number:'1.5-5'}}
+  </p-card>
+  </div>
+
+  <div class="col-4">
+    <p-card header="Gross sales"
+            subheader="of current year"
+    >
+    {{(netSales + 2000000) | currency:'PEN':'symbol-narrow':'1.5-5' }}
+  </p-card>
+  </div>
+
+  <div class="col-4">
+    <p-card header="Percentage profit"
+            subheader="of current year"
+    >
+    {{percentage | percent:'1.5-5' }}
   </p-card>
   </div>
 </div>
