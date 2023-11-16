@@ -6,6 +6,9 @@ import { BasicsComponent } from './pages/basics/basics.component';
 import { SortComponent } from './pages/sort/sort.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PanelModule } from 'primeng/panel';
+
 
 
 @NgModule({
@@ -16,8 +19,10 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
     SortComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     CommonModule,
-    PrimeNgModule
+    PrimeNgModule,
+    PanelModule
   ]
 })
 export class SalesModule { }
