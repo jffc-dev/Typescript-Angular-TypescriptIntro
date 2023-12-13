@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BasicsComponent } from './sales/pages/basics/basics.component';
-import { NoCommonsComponent } from './sales/pages/no-commons/no-commons.component';
+import { UncommonsComponent } from './sales/pages/uncommons/uncommons.component';
 import { NumbersComponent } from './sales/pages/numbers/numbers.component';
 import { SortComponent } from './sales/pages/sort/sort.component';
 
@@ -16,8 +16,8 @@ const routes: Routes = [
     component: NumbersComponent
   },
   {
-    path: 'no-commons',
-    component: NoCommonsComponent
+    path: 'uncommons',
+    component: UncommonsComponent
   },
   {
     path: 'sort',

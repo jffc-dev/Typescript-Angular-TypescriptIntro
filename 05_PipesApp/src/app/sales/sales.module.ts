@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NumbersComponent } from './pages/numbers/numbers.component';
-import { NoCommonsComponent } from './pages/no-commons/no-commons.component';
+import { UncommonsComponent } from './pages/uncommons/uncommons.component';
 import { BasicsComponent } from './pages/basics/basics.component';
 import { SortComponent } from './pages/sort/sort.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
@@ -14,7 +14,7 @@ import { PanelModule } from 'primeng/panel';
 @NgModule({
   declarations: [
     NumbersComponent,
-    NoCommonsComponent,
+    UncommonsComponent,
     BasicsComponent,
     SortComponent
   ],
