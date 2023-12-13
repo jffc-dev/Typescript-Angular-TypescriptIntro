@@ -7,8 +7,6 @@ import { SortComponent } from './pages/sort/sort.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PanelModule } from 'primeng/panel';
-import { FieldsetModule } from 'primeng/fieldset';
 
 
 @NgModule({
@@ -21,9 +19,7 @@ import { FieldsetModule } from 'primeng/fieldset';
   imports: [
     BrowserAnimationsModule,
     CommonModule,
-    PrimeNgModule,
-    PanelModule,
-    FieldsetModule
+    PrimeNgModule
   ]
 })
 export class SalesModule { }
