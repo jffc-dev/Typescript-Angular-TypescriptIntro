@@ -8,7 +8,7 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PanelModule } from 'primeng/panel';
-
+import { FieldsetModule } from 'primeng/fieldset';
 
 
 @NgModule({
@@ -22,7 +22,8 @@ import { PanelModule } from 'primeng/panel';
     BrowserAnimationsModule,
     CommonModule,
     PrimeNgModule,
-    PanelModule
+    PanelModule,
+    FieldsetModule
   ]
 })
 export class SalesModule { }
