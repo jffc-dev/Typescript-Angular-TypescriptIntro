@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NumbersComponent } from './pages/numbers/numbers.component';
-import { UncommonsComponent } from './pages/uncommons/uncommons.component';
-import { BasicsComponent } from './pages/basics/basics.component';
+import { NumbersPageComponent } from './pages/numbers-page/numbers-page.component';
+import { UncommonsPageComponent } from './pages/uncommons-page/uncommons-page.component';
+import { BasicsPageComponent } from './pages/basics-page/basics-page.component';
 import { SortComponent } from './pages/sort/sort.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
@@ -11,9 +11,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    NumbersComponent,
-    UncommonsComponent,
-    BasicsComponent,
+    NumbersPageComponent,
+    UncommonsPageComponent,
+    BasicsPageComponent,
     SortComponent
   ],
   imports: [

@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-basics',
-  templateUrl: './basics.component.html',
+  templateUrl: './basics-page.component.html',
   styles: [
   ]
 })
-export class BasicsComponent {
+export class BasicsPageComponent {
 
   nameLower: string = "javier";
   nameUpper: string = "FLORES";

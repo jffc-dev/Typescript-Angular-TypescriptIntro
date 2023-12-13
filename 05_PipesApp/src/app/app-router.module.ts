@@ -1,23 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BasicsComponent } from './sales/pages/basics/basics.component';
-import { UncommonsComponent } from './sales/pages/uncommons/uncommons.component';
-import { NumbersComponent } from './sales/pages/numbers/numbers.component';
+import { BasicsPageComponent } from './sales/pages/basics-page/basics-page.component';
+import { UncommonsPageComponent } from './sales/pages/uncommons-page/uncommons-page.component';
+import { NumbersPageComponent } from './sales/pages/numbers-page/numbers-page.component';
 import { SortComponent } from './sales/pages/sort/sort.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: BasicsComponent,
+    component: BasicsPageComponent,
     pathMatch: 'full'
   },
   {
     path: 'numbers',
-    component: NumbersComponent
+    component: NumbersPageComponent
   },
   {
     path: 'uncommons',
-    component: UncommonsComponent
+    component: UncommonsPageComponent
   },
   {
     path: 'sort',
