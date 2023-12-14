@@ -21,4 +21,18 @@ export class UncommonsPageComponent {
     this.name = "Nancy";
     this.gender = 'female';
   }
+
+  public clientsMap = {
+    '=0': 'there are no clients waiting.',
+    '=1': 'there is 1 client waiting.',
+    'other': 'there are # clients waiting.'
+  }
+
+  //i18n Plural
+  public clients: string[] = ['Javier','Nancy','Fernando','Victoria','Maximo'];
+
+
+  public removeClient = ():void => {
+    this.clients.pop();
+  }
 }
