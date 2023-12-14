@@ -35,4 +35,11 @@ export class UncommonsPageComponent {
   public removeClient = ():void => {
     this.clients.pop();
   }
+
+  //KeyValue
+  public person = {
+    name: 'Javier',
+    age: 21,
+    address: 'Arequipa'
+  }
 }
