@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BasicsPageComponent } from './sales/pages/basics-page/basics-page.component';
-import { UncommonsPageComponent } from './sales/pages/uncommons-page/uncommons-page.component';
-import { NumbersPageComponent } from './sales/pages/numbers-page/numbers-page.component';
-import { SortComponent } from './sales/pages/sort/sort.component';
+import { BasicsPageComponent } from './products/pages/basics-page/basics-page.component';
+import { UncommonsPageComponent } from './products/pages/uncommons-page/uncommons-page.component';
+import { NumbersPageComponent } from './products/pages/numbers-page/numbers-page.component';
+import { SortComponent } from './products/pages/sort/sort.component';
+import { OrderComponent } from './products/pages/order/order.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'sort',
     component: SortComponent
+  },
+  {
+    path: 'custom',
+    component: OrderComponent
   },
   {
     path: '**',
