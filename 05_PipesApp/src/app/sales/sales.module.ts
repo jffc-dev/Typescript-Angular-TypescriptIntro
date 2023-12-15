@@ -7,6 +7,7 @@ import { SortComponent } from './pages/sort/sort.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { OrderComponent } from './pages/order/order.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NumbersPageComponent,
     UncommonsPageComponent,
     BasicsPageComponent,
-    SortComponent
+    SortComponent,
+    OrderComponent
   ],
   imports: [
     BrowserAnimationsModule,
