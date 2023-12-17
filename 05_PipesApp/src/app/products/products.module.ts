@@ -8,6 +8,7 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OrderComponent } from './pages/order/order.component';
+import { ToggleCasePipe } from './pipes/toggle-case.pipe';
 
 
 @NgModule({
@@ -16,7 +17,10 @@ import { OrderComponent } from './pages/order/order.component';
     UncommonsPageComponent,
     BasicsPageComponent,
     SortComponent,
-    OrderComponent
+    OrderComponent,
+
+    //Pipes
+    ToggleCasePipe
   ],
   imports: [
     BrowserAnimationsModule,
@@ -24,4 +28,4 @@ import { OrderComponent } from './pages/order/order.component';
     PrimeNgModule
   ]
 })
-export class SalesModule { }
+export class ProductsModule { }

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRouterModule } from './app-router.module';
 
 import { AppComponent } from './app.component';
-import { SalesModule } from './products/sales.module';
+import { ProductsModule } from './products/products.module';
 
 // Custom module
 import { SharedModule } from './shared/shared.module';
@@ -23,7 +23,7 @@ registerLocaleData(localeFr);
   imports: [
     AppRouterModule,
     BrowserModule,
-    SalesModule,
+    ProductsModule,
     SharedModule
   ],
   providers: [
