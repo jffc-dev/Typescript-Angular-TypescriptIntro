@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Color, Hero } from '../../interfaces/hero.interface';
 
 @Component({
   selector: 'app-order',
@@ -9,6 +10,29 @@ import { Component } from '@angular/core';
 export class OrderComponent {
 
   public isUpperCase: boolean = false;
+
+  public heroes: Hero[] = [
+    {
+      name: 'superman',
+      canFly: true,
+      color: Color.blue
+    },
+    {
+      name: 'batman',
+      canFly: false,
+      color: Color.black
+    },
+    {
+      name: 'robin',
+      canFly: false,
+      color: Color.green
+    },
+    {
+      name: 'iron man',
+      canFly: false,
+      color: Color.blue
+    }
+  ]
 
   toggleUpperCase(): void{
     this.isUpperCase = !this.isUpperCase
