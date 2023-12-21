@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OrderComponent } from './pages/order/order.component';
 import { ToggleCasePipe } from './pipes/toggle-case.pipe';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
+import { CanFLyPipe } from './pipes/canFly.pipe';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
     OrderComponent,
 
     //Pipes
-    ToggleCasePipe
+    ToggleCasePipe,
+    CanFLyPipe
   ],
   imports: [
     BrowserAnimationsModule,
