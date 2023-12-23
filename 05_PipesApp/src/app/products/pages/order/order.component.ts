@@ -11,6 +11,7 @@ export class OrderComponent {
 
   public isUpperCase: boolean = false;
   public orderField: keyof Hero | '' = ''
+  public typeSort: 1 | -1 = 1
 
   public heroes: Hero[] = [
     {
@@ -40,6 +41,11 @@ export class OrderComponent {
   }
 
   changeSortField = (sortField: keyof Hero):void => {
+    if(this.orderField == sortField){
+      this.typeSort *= -1
+    }else{
+      this.typeSort = 1
+    }
     this.orderField = sortField
   }
 

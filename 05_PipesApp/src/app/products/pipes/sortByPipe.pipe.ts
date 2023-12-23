@@ -6,10 +6,10 @@ import { Hero } from "../interfaces/hero.interface";
 })
 export class SortByPipe implements PipeTransform{
 
-  transform(heroes: Hero[], sortBy?: keyof Hero | ''): Hero[] {
+  transform(heroes: Hero[], sortBy?: keyof Hero | '', typeSort?: 1 | -1): Hero[] {
 
-    if(sortBy)
-      return heroes.sort((a,b)=> (a[sortBy] > b[sortBy]) ? 1 : -1)
+    if(sortBy && typeSort)
+      return heroes.sort((a,b)=> (a[sortBy] > b[sortBy]) ? 1*typeSort : -1*typeSort)
     else
       return heroes
 

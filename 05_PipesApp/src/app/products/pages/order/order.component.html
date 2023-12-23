@@ -20,7 +20,7 @@
 <div class="grid">
   <div class="col mt-2">
     <p-panel header="Heroes">
-      <p-table [value]="heroes | sortBy: orderField" [tableStyle]="{ 'min-width': '50rem' }">
+      <p-table [value]="heroes | sortBy: orderField: typeSort" [tableStyle]="{ 'min-width': '50rem' }">
         <ng-template pTemplate="header">
             <tr>
                 <th>Name</th>
