@@ -10,6 +10,7 @@ import { SearchHeroPageComponent } from './pages/search-hero-page/search-hero-pa
 import { MaterialModule } from '../material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './components/card/card.component';
+import { HeroImagePipe } from './pipes/hero-image.pipe';
 
 
 @NgModule({
@@ -19,7 +20,9 @@ import { CardComponent } from './components/card/card.component';
     ListPageComponent,
     NewHeroPageComponent,
     SearchHeroPageComponent,
-    CardComponent
+    CardComponent,
+    //Pipes
+    HeroImagePipe
   ],
   imports: [
     CommonModule,
