@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HeroesService } from '../../services/heroes.service';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-search-hero-page',
@@ -8,4 +10,7 @@ import { Component } from '@angular/core';
 })
 export class SearchHeroPageComponent {
 
+  constructor(private heroesService: HeroesService){}
+
+  public searchInput = new FormControl('')
 }
