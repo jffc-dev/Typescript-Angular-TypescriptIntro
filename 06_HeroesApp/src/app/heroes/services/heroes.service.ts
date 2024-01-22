@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError, of } from 'rxjs';
+import { Observable, catchError, map, of } from 'rxjs';
 import { Hero } from '../interfaces/hero.interface';
 import { enviroment } from 'enviroments/enviroments';
 
@@ -25,7 +25,9 @@ export class HeroesService {
   }
 
   getSuggestions(query: string): Observable<Hero[]>{
-    return this.http.get<Hero[]>(`${this.baseUrl}/heroes?q=${query}&_limit=6`)
+    return this.http.get<Hero[]>(`${this.baseUrl}/heroes`).pipe(
+      map((heroes) => heroes.filter(hero => hero.superhero.toLowerCase().includes(query.toLowerCase()))),
+    )
   }
 
 }
